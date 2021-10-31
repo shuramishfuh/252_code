@@ -1,0 +1,76 @@
+package triangle;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+
+class TestForBoundary {
+
+	Triangle tri;
+
+	@BeforeEach
+	void setUp() {
+		tri = new Triangle();
+	}
+
+	@Tag("isNotTriangle")
+	@Tag("Isosceles")
+	@Test
+	void MaxBoundFirstAndLast() {
+		assertEquals("Not a triangle", tri.computeType(String.valueOf(Integer.MAX_VALUE), "1", String.valueOf(Integer.MAX_VALUE)));
+		 
+	}
+	
+	@Tag("isNotTriangle")
+	@Tag("Isosceles")
+	@Test
+	void MaxBoundFirstAndSecond() {
+		assertEquals("Not a triangle", tri.computeType(String.valueOf(Integer.MAX_VALUE), String.valueOf(Integer.MAX_VALUE),"1"));
+		 
+	}
+	
+	@Tag("isNotTriangle")
+	@Tag("Isosceles")
+	@Test
+	void MaxBoundLastAndSecond() {
+		assertEquals("Not a triangle", tri.computeType("1",String.valueOf(Integer.MAX_VALUE), String.valueOf(Integer.MAX_VALUE)));
+		 
+	}
+	
+	@Tag("isNotTriangle")
+	@Test
+	void MaxBoundLast() {
+		assertEquals("Not a triangle", tri.computeType("1","3454", String.valueOf(Integer.MAX_VALUE)));
+		 
+	}
+	
+	@Tag("isTriangle")
+	@Test
+	void MaxBoundAll() {
+		assertEquals("equilateral triangle", tri.computeType(String.valueOf(Integer.MAX_VALUE), String.valueOf(Integer.MAX_VALUE),String.valueOf(Integer.MAX_VALUE)));
+	}
+	
+	@Tag("isTriangle")
+	@Test
+	void MaxBoundAllSubOne() {
+		assertEquals("equilateral triangle", tri.computeType(String.valueOf(Integer.MAX_VALUE-1), String.valueOf(Integer.MAX_VALUE-1),String.valueOf(Integer.MAX_VALUE-1)));
+	}
+	
+	@Tag("isNotTriangle")
+	@Test
+	void MaxBoundAllPlusOne() {
+		assertEquals("equilateral triangle", tri.computeType(String.valueOf(Integer.MAX_VALUE+3), String.valueOf(Integer.MAX_VALUE+1),String.valueOf(Integer.MAX_VALUE+1)));
+	}
+	
+	@Tag("isNotTriangle")
+	@Tag("Isosceles")
+	@Test
+	void MaxBoundFirst() {
+		assertEquals("Not a triangle", tri.computeType(String.valueOf(Integer.MAX_VALUE),"1","3454"));
+		 
+	}
+
+
+}

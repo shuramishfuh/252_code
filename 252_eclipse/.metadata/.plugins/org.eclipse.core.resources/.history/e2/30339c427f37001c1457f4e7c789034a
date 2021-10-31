@@ -1,0 +1,22 @@
+package triangle;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class TestNotValidTriangle {
+
+	Triangle tri;
+
+	@BeforeEach
+	void setUp() {
+		tri = new Triangle();
+	}
+
+	@Test
+	void OneSumGreaterThanOther() {
+		assertEquals("Not a triangle", tri.computeType("1", "1", "15"));
+	}
+
+}

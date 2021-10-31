@@ -1,0 +1,51 @@
+package triangle;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class TestValidInput {
+   Triangle tri;
+	@BeforeEach
+	void setUp()  {
+		tri = new Triangle();
+	}
+
+	@Test
+	void testALLNulls() {
+		assertEquals("Invalid input could not parse to int",tri.computeType(null, null, null));
+	}
+	
+	@Test
+	void testTwoNullsSecondAndLast() {
+		assertEquals("Invalid input could not parse to int", tri.computeType("1", null, null));
+	}
+	
+	@Test
+	void TestTwoNullsFirstAndSecond() {
+		assertEquals("Invalid input could not parse to int",tri.computeType(null, null, "1"));
+	}
+	
+	@Test
+	void TestTwoNullsFirstAndLast() {
+		assertEquals("Invalid input could not parse to int",tri.computeType(null, "1", null));
+	}
+	
+	@Test
+	void TestNullLast() {
+		assertEquals("Invalid input could not parse to int",tri.computeType("1", "1", null));
+	}
+	
+	@Test
+	void TestNullSecond() {
+		assertEquals("Invalid input could not parse to int", tri.computeType("1", null, "1"));
+	}
+	
+	@Test
+	void TestNullFirst() {
+		assertEquals("Invalid input could not parse to int",tri.computeType(null, "1", "1"));
+	}
+	
+
+}

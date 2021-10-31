@@ -1,0 +1,26 @@
+package triangle;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+
+class TestForBoundary {
+
+	Triangle tri;
+
+	@BeforeEach
+	void setUp() {
+		tri = new Triangle();
+	}
+
+	@Tag("isTriangle")
+	@Tag("equilateral")
+	@Test
+	void time() {
+		assertEquals("Not a Triangle", tri.computeType(String.valueOf(Integer.MAX_VALUE), "1", String.valueOf(Integer.MAX_VALUE)));
+		 
+	}
+
+}

@@ -1,0 +1,3 @@
+C:/Users/Agamatimtim/Pictures/AUB/CMPS 252/CMPS 252/cmake-build-debug/CMakeFiles/CMPS_252.dir
+C:/Users/Agamatimtim/Pictures/AUB/CMPS 252/CMPS 252/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Agamatimtim/Pictures/AUB/CMPS 252/CMPS 252/cmake-build-debug/CMakeFiles/rebuild_cache.dir

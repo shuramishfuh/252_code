@@ -1,0 +1,21 @@
+package triangle;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class TestValidInput {
+   Triangle tri;
+	@BeforeEach
+	void setUp()  {
+		tri = new Triangle();
+	}
+
+	@Test
+	void testNulls() {
+		String result = tri.computeType(null, null, null);
+		assertEquals("Invalid input could not parse to int",result);
+	}
+
+}

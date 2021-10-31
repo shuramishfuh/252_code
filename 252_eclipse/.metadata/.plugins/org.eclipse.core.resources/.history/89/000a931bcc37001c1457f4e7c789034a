@@ -1,0 +1,24 @@
+package triangle;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+
+class TestForBoundary {
+
+	Triangle tri;
+
+	@BeforeEach
+	void setUp() {
+		tri = new Triangle();
+	}
+
+	@Tag("isTriangle")
+	@Test
+	void time() {
+		assertEquals("Scalene Triangle", tri.computeType("2147483647", "2147483000", "2147483647"));
+	}
+
+}

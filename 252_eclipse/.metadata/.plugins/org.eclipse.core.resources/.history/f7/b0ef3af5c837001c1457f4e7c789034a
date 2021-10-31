@@ -1,0 +1,25 @@
+package triangle;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
+import org.junit.jupiter.api.Test;
+
+class TestForValidTriangle {
+
+	Triangle tri;
+
+	@BeforeEach
+	void setUp() {
+		tri = new Triangle();
+	}
+
+	@Tag("Isosceles")
+	@Test 
+	void testForIsosceles() {
+		assertEquals("Isosceles triangle",tri.computeType("6", "6", "4"));
+		
+	}
+}

@@ -1,0 +1,50 @@
+package triangle;
+
+public class Triangle implements ITriangle {
+
+	public Triangle() {
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
+	@Override
+	public String computeType(String side1, String side2, String side3) {
+		// TODO Auto-generated method stub
+		int a;
+		int b;
+		int c;
+		try{
+			 a = Integer.parseInt(side1);	
+			 b = Integer.parseInt(side2);
+			 c = Integer.parseInt(side3);
+		}
+		catch (NumberFormatException ex){
+			return "Could not convert to integer. Detail: "+ex.getMessage();
+		}
+		
+		if(a ==b & b ==c) 
+			return "equilaterial triangle";
+		
+		else if (((a == b & b!=c) | (a == c & b!=a) | (c == b & c!=a)) &
+				(a+b >c) & (a+c >b) & (b+c >a))
+			return "Isosceles triangle";
+		else if ((a+b >c) & (a+c >b) & (b+c >a))
+			return "Scalene Triangle";
+		
+		else return "Not a triangle ";
+			
+		
+	
+	}
+	
+	
+	
+	public static void main(String[] args) {
+			Triangle t = new Triangle();
+			
+		System.out.println( t.computeType("1", 2, 2));
+
+	}
+
+}
